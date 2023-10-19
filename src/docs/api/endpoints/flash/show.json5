@@ -1,0 +1,35 @@
+{
+	summary: 'Playを取得します。',
+	description: 'Playを取得します。',
+	tags: [
+		'flash',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			flashId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'Playのid。',
+			},
+		},
+		required: [
+			'flashId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'Flash',
+		$ref: 'misskey://Flash',
+	},
+	errors: {
+		'f0d34a1a-d29a-401d-90ba-1982122b5630': {
+			id: 'f0d34a1a-d29a-401d-90ba-1982122b5630',
+			code: 'NO_SUCH_FLASH',
+			description: '指定されたPlayが存在しません。',
+		},
+	},
+}
