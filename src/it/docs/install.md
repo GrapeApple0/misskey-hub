@@ -5,7 +5,15 @@ Grazie per il tuo interesse nel costruire una istanza Misskey 🚀
 Ci sono vari modi per crearne una, scegli tra quelli elencati e segui la relativa guida.
 
 ::: danger
-Never change the domain name (hostname) of an instance once you start using it!
+Do not recreate the database with the domain/hostname of the server once you have started using it!
+:::
+
+::: danger
+Se si utilizza Cloudflare per il proprio server, non utilizzare l'impostazione Auto Minify.
+
+Misskey non funzionerà correttamente perché Cloudflare non interpreterà il JavaScript più recente e romperà il codice sorgente al suo interno.
+
+Per maggiori informazioni [misskey-dev/misskey #9791](https://github.com/misskey-dev/misskey/issues/9791)
 :::
 
 ## Usando Docker Compose

@@ -35,10 +35,9 @@ Please do not share your access token with anyone.
 To obtain an access token for a user of the application ( simply "the user"), you can request it to be issued in the following way.
 
 ::: tip
+The method described below is called MiAuth, ant it issues an instant access token without creating an app.
 
-以下に説明する方法は、アプリを作成せずインスタントにアクセストークンを発行する、MiAuthと呼ばれるものです。
-
-[アプリ作成方式でのアクセストークン取得方法もあります（旧来型）。](./app)
+You can still [create an app to obtain access token](./app.md).
 :::
 
 #### Step 1
@@ -70,7 +69,7 @@ You can also set a few options as query parameters to the URL:
 
 ::: tip Example
 ```:no-line-numbers
-https://misskey.io/miauth/c1f6d42b-468b-4fd2-8274-e58abdedef6f?name=MyApp&callback=https%3A%2F%2Fmyapp.example.com%2Fcallback&permisson=write:notes,write:following,read:drive
+https://misskey.io/miauth/c1f6d42b-468b-4fd2-8274-e58abdedef6f?name=MyApp&callback=https%3A%2F%2Fmyapp.example.com%2Fcallback&permission=write:notes,write:following,read:drive
 ```
 :::
 
